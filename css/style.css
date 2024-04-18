@@ -725,7 +725,8 @@ span
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    grid-template-areas: 'fields fields'    'policy submit';
+    grid-template-areas: 'fields fields'
+    'policy submit';
 }
 
 .form__fields
@@ -734,7 +735,8 @@ span
 
     grid-area: fields;
     gap: 21px;
-    grid-template-areas: 'name email'    'description description';
+    grid-template-areas: 'name email'
+    'description description';
 }
 
 .form ._name
@@ -1190,7 +1192,9 @@ span
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    grid-template-areas: 'title title'    'profiles icons'    'info info';
+    grid-template-areas: 'title title'
+    'profiles icons'
+    'info info';
 }
 
 .card__title
@@ -1242,7 +1246,9 @@ span
     grid-area: info;
     gap: 7px 8px;
     grid-template-columns: 18px auto auto 10px;
-    grid-template-areas: 'author fio time other'    'author review review review'    '. deviders deviders .';
+    grid-template-areas: 'author fio time other'
+    'author review review review'
+    '. deviders deviders .';
 }
 
 .card__author
@@ -1382,6 +1388,7 @@ span
 
 .change
 {
+    display: none;
     position: fixed;
     z-index: 1;
     top: 300px;
@@ -1430,7 +1437,9 @@ span
     -ms-flex-align: start;
     align-items: flex-start;
     grid-template-columns: auto 500px;
-    grid-template-areas: 'maintitle phone'    'achievment phone'    'technologies technologies';
+    grid-template-areas: 'maintitle phone'
+    'achievment phone'
+    'technologies technologies';
 }
 
 .startpage__title
@@ -1616,7 +1625,10 @@ span
 
     gap: 0 182px;
     grid-template-columns: auto 500px;
-    grid-template-areas: 'header list'    'contact list'    'contact list'    'contact list';
+    grid-template-areas: 'header list'
+    'contact list'
+    'contact list'
+    'contact list';
 }
 
 .benefits__header
@@ -1783,7 +1795,9 @@ span
     align-items: center;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 280px 280px 280px;
-    grid-template-areas: '_1 _1 _1'    '_2 _3 _3'    '_2 _4 _5';
+    grid-template-areas: '_1 _1 _1'
+    '_2 _3 _3'
+    '_2 _4 _5';
 }
 
 .advantages__item
@@ -1943,7 +1957,8 @@ span
     -ms-flex-pack: justify;
     justify-content: space-between;
     gap: 75px 0;
-    grid-template-areas: 'header arrows'    'list list';
+    grid-template-areas: 'header arrows'
+    'list list';
 }
 
 .projects__header
@@ -2097,7 +2112,8 @@ span
     grid-template-rows: -webkit-min-content -webkit-min-content;
     grid-template-rows:         min-content min-content;
     gap: 0 20px;
-    grid-template-areas: 'avatar name'    'avatar jobtitle';
+    grid-template-areas: 'avatar name'
+    'avatar jobtitle';
 }
 
 .collaborates__avatar
@@ -2387,7 +2403,8 @@ span
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    grid-template-areas: 'contact social'    'copyright copyright';
+    grid-template-areas: 'contact social'
+    'copyright copyright';
 }
 
 .footer__contacts
