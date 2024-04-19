@@ -59,6 +59,7 @@ window.addEventListener('DOMContentLoaded', ()=> {
               breakpoint: 480.1,
               settings: {
                 slidesToShow: 1,
+                variableWidth: false,
                 appendArrows: document.querySelector('.projects__arrows '),
               }
             },
@@ -334,8 +335,8 @@ window.addEventListener('DOMContentLoaded', ()=> {
     let translateSwitch = document.querySelector('.change'),
         translateData = [
             {
-                ru: '<h2 class="business__title title">Мобильное приложение <span class="_color-blue">ключевой инструмент вашего бизнеса</span></h2>',
-                eng: '<h2 class="business__title title">A mobile app is a <span class="_color-blue">key tool for your business</span></h2>',
+                ru: 'Мобильное приложение <span class="_color-blue">ключевой инструмент вашего бизнеса</span>',
+                eng: 'A mobile app is a <span class="_color-blue">key tool for your business</span>',
             },
             {
                 ru: 'Увеличение доступности',

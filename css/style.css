@@ -725,8 +725,7 @@ span
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    grid-template-areas: 'fields fields'
-    'policy submit';
+    grid-template-areas: 'fields fields'    'policy submit';
 }
 
 .form__fields
@@ -735,8 +734,7 @@ span
 
     grid-area: fields;
     gap: 21px;
-    grid-template-areas: 'name email'
-    'description description';
+    grid-template-areas: 'name email'    'description description';
 }
 
 .form ._name
@@ -1192,9 +1190,7 @@ span
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    grid-template-areas: 'title title'
-    'profiles icons'
-    'info info';
+    grid-template-areas: 'title title'    'profiles icons'    'info info';
 }
 
 .card__title
@@ -1246,9 +1242,7 @@ span
     grid-area: info;
     gap: 7px 8px;
     grid-template-columns: 18px auto auto 10px;
-    grid-template-areas: 'author fio time other'
-    'author review review review'
-    '. deviders deviders .';
+    grid-template-areas: 'author fio time other'    'author review review review'    '. deviders deviders .';
 }
 
 .card__author
@@ -1388,7 +1382,6 @@ span
 
 .change
 {
-    display: none;
     position: fixed;
     z-index: 1;
     top: 300px;
@@ -1437,9 +1430,7 @@ span
     -ms-flex-align: start;
     align-items: flex-start;
     grid-template-columns: auto 500px;
-    grid-template-areas: 'maintitle phone'
-    'achievment phone'
-    'technologies technologies';
+    grid-template-areas: 'maintitle phone'    'achievment phone'    'technologies technologies';
 }
 
 .startpage__title
@@ -1488,6 +1479,12 @@ span
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+}
+
+.business__title,
+.business__subitle
+{
+    max-width: 80%;
 }
 
 .business__title
@@ -1625,10 +1622,7 @@ span
 
     gap: 0 182px;
     grid-template-columns: auto 500px;
-    grid-template-areas: 'header list'
-    'contact list'
-    'contact list'
-    'contact list';
+    grid-template-areas: 'header list'    'contact list'    'contact list'    'contact list';
 }
 
 .benefits__header
@@ -1795,9 +1789,7 @@ span
     align-items: center;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 280px 280px 280px;
-    grid-template-areas: '_1 _1 _1'
-    '_2 _3 _3'
-    '_2 _4 _5';
+    grid-template-areas: '_1 _1 _1'    '_2 _3 _3'    '_2 _4 _5';
 }
 
 .advantages__item
@@ -1805,6 +1797,7 @@ span
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    overflow: hidden;
 
     height: 100%;
 
@@ -1957,8 +1950,7 @@ span
     -ms-flex-pack: justify;
     justify-content: space-between;
     gap: 75px 0;
-    grid-template-areas: 'header arrows'
-    'list list';
+    grid-template-areas: 'header arrows'    'list list';
 }
 
 .projects__header
@@ -2112,8 +2104,7 @@ span
     grid-template-rows: -webkit-min-content -webkit-min-content;
     grid-template-rows:         min-content min-content;
     gap: 0 20px;
-    grid-template-areas: 'avatar name'
-    'avatar jobtitle';
+    grid-template-areas: 'avatar name'    'avatar jobtitle';
 }
 
 .collaborates__avatar
@@ -2188,9 +2179,17 @@ span
 
 .team__pic
 {
+    overflow: hidden;
+
+    min-width: 354px;
     max-width: var(--picWidth);
 
     border-radius: 30px;
+}
+
+.team__pic img
+{
+    width: 100%;
 }
 
 .team__info
@@ -2243,8 +2242,6 @@ span
 .team__arrows
 {
     z-index: 1;
-
-    display: none;
 
     width: -webkit-fit-content;
     width:    -moz-fit-content;
@@ -2301,6 +2298,11 @@ span
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
+}
+
+.faq__item
+{
+    width: 100%;
 }
 
 .feedback
@@ -2403,8 +2405,7 @@ span
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    grid-template-areas: 'contact social'
-    'copyright copyright';
+    grid-template-areas: 'contact social'    'copyright copyright';
 }
 
 .footer__contacts
@@ -2520,6 +2521,12 @@ span
     .business
     {
         padding-bottom: 45px;
+    }
+
+    .business__title,
+    .business__subitle
+    {
+        max-width: 100%;
     }
 
     .business__list
@@ -2780,7 +2787,6 @@ span
     .projects__item
     {
         min-width: unset;
-        margin-right: 32px;
         padding: 48px;
     }
 
@@ -2794,6 +2800,11 @@ span
         margin-bottom: 48px;
 
         text-align: center;
+    }
+
+    .projects__pic
+    {
+        max-width: 230px;
     }
 
     .collaborates
@@ -2888,6 +2899,7 @@ span
 
     .team__pic
     {
+        min-width: unset;
         max-width: 100%;
     }
 
@@ -2921,7 +2933,7 @@ span
 
     .faq
     {
-        padding: 58px 0 64px;
+        padding: 58px 0 257px;
     }
 
     .faq__subtitle
@@ -2939,6 +2951,32 @@ span
     .faq__list
     {
         padding-bottom: 0;
+    }
+
+    .feedback
+    {
+        padding: 0 var(--containerIndents);
+    }
+
+    .feedback__container
+    {
+            flex-direction: column;
+
+        width: 100%;
+        margin-top: -192px !important;
+        padding: 57px 34px !important;
+
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        gap: 60px;
+    }
+
+    .feedback__title
+    {
+        margin-bottom: 0;
+
+        text-align: left;
     }
 }
 
@@ -3097,31 +3135,6 @@ span
         display: none;
     }
 
-    .feedback
-    {
-        padding: 0 var(--containerIndents);
-    }
-
-    .feedback__container
-    {
-            flex-direction: column;
-
-        margin-top: 0 !important;
-        padding: 57px 34px !important;
-
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        gap: 60px;
-    }
-
-    .feedback__title
-    {
-        margin-bottom: 0;
-
-        text-align: left;
-    }
-
     .footer
     {
         padding: 80px 40px 40px;
@@ -3188,7 +3201,7 @@ span
 
 @media (max-width: 480px)
 {
-    .technologies
+    .technologies__list
     {
         display: grid;
 
@@ -3278,6 +3291,8 @@ span
 
     .startpage__technologies
     {
+        width: 100%;
+
         -webkit-box-ordinal-group: 5;
         -ms-flex-order: 4;
         order: 4;
@@ -3406,11 +3421,6 @@ span
     .projects__list
     {
         max-width: 100%;
-    }
-
-    .projects .slick-slide
-    {
-        margin-right: 0;
     }
 
     .collaborates__title br

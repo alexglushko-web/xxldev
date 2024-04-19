@@ -75,7 +75,58 @@ i::before
 
 .icon-instagram2:before
 {
+    content: '\e90c';
+
+    color: #f5f7f9;
+}
+
+.icon-medal .path1:before
+{
+    content: '\e911';
+
+    color: #605df4;
+}
+
+.icon-medal .path2:before
+{
+    margin-left: -.9833984375em;
+
     content: '\e918';
+
+    color: #605df4;
+}
+
+.icon-medal .path3:before
+{
+    margin-left: -.9833984375em;
+
+    content: '\e919';
+
+    color: #605df4;
+}
+
+.icon-medal .path4:before
+{
+    margin-left: -.9833984375em;
+
+    content: '\e91a';
+
+    opacity: .4;
+    color: #605df4;
+}
+
+.icon-medal .path5:before
+{
+    margin-left: -.9833984375em;
+
+    content: '\e91b';
+
+    color: #605df4;
+}
+
+.icon-whatsapp:before
+{
+    content: '\e91c';
 
     color: #f5f7f9;
 }
@@ -84,17 +135,10 @@ i::before
 {
     margin-left: -.25rem;
 
-    content: '\e919';
+    content: '\e91d';
     -webkit-transform: scale(.85);
         -ms-transform: scale(.85);
             transform: scale(.85);
-
-    color: #f5f7f9;
-}
-
-.icon-whatsapp:before
-{
-    content: '\e911';
 
     color: #f5f7f9;
 }
@@ -191,6 +235,13 @@ i::before
     color: #605df4;
 }
 
+.icon-arrow2-right:before
+{
+    content: '\e907';
+
+    color: #f5f7f9;
+}
+
 .icon-competitive:before
 {
     content: '\e908';
@@ -215,13 +266,6 @@ i::before
     content: '\e90b';
 
     color: #5235e8;
-}
-
-.icon-medal:before
-{
-    content: '\e90c';
-
-    color: #605df4;
 }
 
 .icon-personalization:before
