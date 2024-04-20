@@ -2753,7 +2753,7 @@ span
         align-items: center;
     }
 
-    .studio__pic
+    .studio__img
     {
         margin-top: -25px;
     }
@@ -2921,7 +2921,7 @@ span
             flex-direction: column-reverse;
 
         padding: 0;
-        padding-bottom: 32px;
+        padding: 0 18px 32px;
 
         background-size: cover;
 
