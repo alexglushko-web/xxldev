@@ -615,6 +615,8 @@ span
 
 .technologies__pic
 {
+    max-height: 32px;
+
     -webkit-filter: grayscale(1);
             filter: grayscale(1);
 }
@@ -1209,7 +1211,13 @@ span
 
 .card__avatar
 {
+    width: 18px;
     margin-right: -10px;
+}
+
+.card__avatar:first-child
+{
+    width: 20px;
 }
 
 .card__icons
@@ -1247,6 +1255,8 @@ span
 
 .card__author
 {
+    width: 18px;
+
     grid-area: author;
 }
 
@@ -2463,6 +2473,78 @@ span
 
 @media (max-width: 992px)
 {
+    *
+    {
+        --containerIndents: 16px;
+    }
+
+    h1
+    {
+        font-size: 32px;
+        line-height: 39px;
+    }
+
+    h2
+    {
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    h4
+    {
+        font-size: 16px;
+    }
+
+    h5
+    {
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    p
+    {
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .menu__list
+    {
+        padding: 26px 0;
+    }
+
+    .menu__link
+    {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .burger._active .burger__btn
+    {
+        margin-top: 0;
+        margin-right: var(--containerIndents);
+        padding: 26px;
+
+        border: 1px solid white;
+
+        --width: 20px;
+        --height: 17.5px;
+    }
+
+    .contactus
+    {
+        font-size: 14px;
+        line-height: 28px;
+
+        padding: 8px 16px;
+    }
+
+    .contactus__icon
+    {
+        font-size: 16px;
+
+        margin-left: 4px;
+    }
+
     .technologies
     {
         display: -webkit-box;
@@ -2492,6 +2574,66 @@ span
         max-height: 26px;
     }
 
+    .contacts__item
+    {
+        font-size: 16px;
+        line-height: 20.8px;
+    }
+
+    .form
+    {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+            flex-direction: column;
+
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        gap: 0;
+    }
+
+    .form__fields
+    {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+            flex-direction: column;
+
+        width: 100%;
+        margin-bottom: 24px;
+
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+    }
+
+    .form__input
+    {
+        width: 100%;
+    }
+
+    .form__policy
+    {
+        margin-bottom: 18px;
+    }
+
+    .dropdown__title
+    {
+        font-size: 14px;
+        line-height: 28px;
+
+        padding: 24px 7.5px;
+    }
+
+    .dropdown__content
+    {
+        padding: 24px 7.5px;
+    }
+
     .steps
     {
         padding: 32px 0 60px;
@@ -2512,6 +2654,27 @@ span
         gap: 20px;
     }
 
+    .logo
+    {
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    .logo__icon
+    {
+        font-size: 30px;
+    }
+
+    .header
+    {
+        padding: 26px 0;
+    }
+
+    .header__social
+    {
+        display: none;
+    }
+
     .startpage
     {
         padding: 111px 0 78px 0;
@@ -2519,12 +2682,13 @@ span
 
     .startpage__container
     {
-        grid-template-columns: auto 50%;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 'maintitle phone'        'achievment achievment'        'technologies technologies';
     }
 
     .startpage__technologies
     {
-        margin-top: 0;
+        margin-top: 80px;
     }
 
     .startpage__title
@@ -2996,162 +3160,6 @@ span
 
         text-align: left;
     }
-}
-
-@media (max-width: 768px)
-{
-    *
-    {
-        --containerIndents: 16px;
-    }
-
-    h1
-    {
-        font-size: 32px;
-        line-height: 39px;
-    }
-
-    h2
-    {
-        font-size: 24px;
-        line-height: 29px;
-    }
-
-    h4
-    {
-        font-size: 16px;
-    }
-
-    h5
-    {
-        font-size: 12px;
-        line-height: 15px;
-    }
-
-    p
-    {
-        font-size: 12px;
-        line-height: 15px;
-    }
-
-    .menu__list
-    {
-        padding: 26px 0;
-    }
-
-    .menu__link
-    {
-        font-size: 20px;
-        line-height: 24px;
-    }
-
-    .burger._active .burger__btn
-    {
-        margin-top: 0;
-        margin-right: var(--containerIndents);
-        padding: 26px;
-
-        border: 1px solid white;
-
-        --width: 20px;
-        --height: 17.5px;
-    }
-
-    .contactus
-    {
-        font-size: 14px;
-        line-height: 28px;
-
-        padding: 8px 16px;
-    }
-
-    .contactus__icon
-    {
-        font-size: 16px;
-
-        margin-left: 4px;
-    }
-
-    .contacts__item
-    {
-        font-size: 16px;
-        line-height: 20.8px;
-    }
-
-    .form
-    {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-            flex-direction: column;
-
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        -webkit-box-align: start;
-        -ms-flex-align: start;
-        align-items: flex-start;
-        gap: 0;
-    }
-
-    .form__fields
-    {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-            flex-direction: column;
-
-        width: 100%;
-        margin-bottom: 24px;
-
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-    }
-
-    .form__input
-    {
-        width: 100%;
-    }
-
-    .form__policy
-    {
-        margin-bottom: 18px;
-    }
-
-    .dropdown__title
-    {
-        font-size: 14px;
-        line-height: 28px;
-
-        padding: 24px 7.5px;
-    }
-
-    .dropdown__content
-    {
-        padding: 24px 7.5px;
-    }
-
-    .logo
-    {
-        font-size: 24px;
-        line-height: 29px;
-    }
-
-    .logo__icon
-    {
-        font-size: 30px;
-    }
-
-    .header
-    {
-        padding: 26px 0;
-    }
-
-    .header__social
-    {
-        display: none;
-    }
 
     .footer
     {
@@ -3210,7 +3218,10 @@ span
     {
         margin-bottom: 64px;
     }
+}
 
+@media (max-width: 768px)
+{
     *
     {
         --containerIndents: 20px;
