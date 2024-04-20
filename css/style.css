@@ -1596,7 +1596,7 @@ span
 .studio__info
 {
     max-width: 424px;
-    padding: 145px 0 125px;
+    padding: 145px 0;
 }
 
 .studio__title
@@ -1615,12 +1615,14 @@ span
 
 .studio__pic
 {
-    margin-top: -118px;
+    margin-top: auto;
 }
 
 .studio__img
 {
     width: 100%;
+    max-width: 450px;
+    margin-top: -118px;
 }
 
 .benefits
@@ -2543,6 +2545,16 @@ span
         font-size: 16px;
 
         margin-left: 4px;
+    }
+
+    .phone__note._2
+    {
+        top: 40%;
+    }
+
+    .phone__note._3
+    {
+        top: 61%;
     }
 
     .technologies
