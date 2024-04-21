@@ -60,7 +60,6 @@ window.addEventListener('DOMContentLoaded', ()=> {
               settings: {
                 slidesToShow: 1,
                 variableWidth: false,
-                appendArrows: document.querySelector('.projects__arrows '),
               }
             },
             // {
@@ -252,7 +251,7 @@ window.addEventListener('DOMContentLoaded', ()=> {
                     eng: 'Improved marketing and customer interaction',
                 },
                 {
-                    ru: 'Вы можете отправлять им уведомления о специальных предложениях, акциях и новых продуктах, что способствует увеличению лояльности клиентов.',
+                    ru: 'Упрощение коммуникации с клиентом через Push-уведомления о специальных предложениях, акциях и новых продуктах, что способствует увеличению лояльности клиентов.',
                     eng: 'You can send them notifications about special offers, promotions and new products, which helps to increase customer loyalty.',
                 },
                 {
@@ -332,6 +331,30 @@ window.addEventListener('DOMContentLoaded', ()=> {
                 {
                     ru: `Вместе определим цели и приоритеты, разобьём проект на этапы и определим необходимый базовый функционал MVP для быстрой проверки гипотез вашей бизнес-модели. Составим детальное Техническое задание и предварительное коммерческое предложение на каждый из этапов создания/развития проекта.`,
                     eng: `Discussing the future product Together we will define goals and priorities, divide the project into stages and define the necessary basic MVP functionality to quickly test the hypotheses of your business model. We will draw up a detailed Terms of Reference and a preliminary commercial proposal for each of the stages of project creation/development`,
+                },
+                {
+                    ru: `Создание Дизайна и прототипа`,
+                    eng: `Creating a Design and Prototype`,
+                },
+                {
+                    ru: `Создадим дизайн и прототип интерфейса будущего приложения. Мы воспроизведём структуру и продумаем основные сценарии пользовательского поведения. Прототипирование позволит учесть максимум мелочей, тем самым сэкономив часы на дальнейших этапах.`,
+                    eng: `We will create a design and prototype of the interface of the future application. We will reproduce the structure and think through the main scenarios of user behavior. Prototyping will allow us to take into account maximum details, thus saving hours on further stages.`,
+                },
+                {
+                    ru: `Разработка проекта`,
+                    eng: `Project development`,
+                },
+                {
+                    ru: `После внесения необходимых корректировок в документацию и дизайн, мы дадим окончательную оценку этапов по времени и стоимости и приступим к воплощению вашей идеи в реальный продукт, гарантируя качество и пошаговую отчетность в процессе работы`,
+                    eng: `After making the necessary adjustments to the documentation and design, we will give a final estimate of the stages in time and cost and begin to realize your idea into a real product guaranteeing quality and step-by-step reporting in the process of work`,
+                },
+                {
+                    ru: `Тестирование > Запуск > Тех поддержка`,
+                    eng: `Testing > Launch > Tech Support`,
+                },
+                {
+                    ru: `Проводим функциональное тестирование на наличие багов. Адаптируем приложение на разные разрешения телефонов. Оформляем страницу приложения и публикуем в магазины App Store и Google Play. Следим за стабильностью работы приложения осуществляя тех поддержку.`,
+                    eng: `Conduct functional testing for bugs. Adapt the application for different phone resolutions. We design the application page and publish it in the App Store and Google Play stores. Monitor the stability of the application by providing technical support.`,
                 },
                 {
                     ru: `<span class="_color-blue">Преимущества</span> нашей студии`,
@@ -458,6 +481,63 @@ window.addEventListener('DOMContentLoaded', ()=> {
                     eng: `Studio is a dream, to which I have been going all my life, for the sake of which I have been accumulating experience and kicking up bumps.`,
                 },
                 {
+                    ru: `Надежда Тихомирова`,
+                    eng: `Nadezhda Tikhomirova`,
+                },
+                {
+                    ru: `Исполнительный директор`,
+                    eng: `Executive Director`,
+                },
+                {
+                    ru: `Управленец со стажем 24 года. Последние 10 лет руководила заводом по производству газоаналитического оборудования igm-pribor.ru`,
+                    eng: `Manager with 24 years of experience. For the last 10 years she has been managing a plant producing gas analyzing equipment igm-pribor.ru.`,
+                },
+                {
+                    ru: `Частный инвестор`,
+                    eng: `Private investor`,
+                },
+                {
+                    ru: `Выпускница Executive MBA ИМИСП, К.И.Н`,
+                    eng: `Executive MBA graduate of IMISP, C.I.N.`,
+                },
+                {
+                    ru: `Вижу нестандартные решения, воплощаю в жизнь, ускоряю все процессы x10. <br>Коренная Петербурженка, неисправимый оптимист.`,
+                    eng: `I see non-standard solutions, put them into practice, accelerate all processes x10. <br>Native Petersburger, incorrigible optimist.`,
+                },
+                {
+                    ru: `Никита Нитемин`,
+                    eng: `Nikita Nitemin`,
+                },
+                {
+                    ru: `Технический директор`,
+                    eng: `Technical Director`,
+                },
+                {
+                    ru: `5 лет в области in-app рекламы в OMD Group и BYYD.`,
+                    eng: `5 years in in-app advertising at OMD Group and BYYD.`,
+                },
+                {
+                    ru: `Опыт разработки приложений с разнообразным функционалом, включая проекты с более чем 50 экранами.`,
+                    eng: `Experience in developing apps with a variety of functionality, including projects with more than 50 screens.`,
+                },
+                {
+                    ru: `Эффективно веду и управляю процессом разработки мобильных приложений на Flutter и FlutterFlow.`,
+                    eng: `Effectively lead and manage the mobile app development process on Flutter and FlutterFlow.`,
+                },
+                {
+                    ru: `Специализируюсь на создании MVP, что позволяет быстро превращать ваши идеи в жизнеспособные продукты.`,
+                    eng: `Specialize in building MVPs, allowing you to quickly turn your ideas into viable products.`,
+                },
+                {
+                    ru: `
+                    Стремлюсь к точности, совершенствованию и внедрению новых технологий для достижения самого лучшего качества. `,
+                    eng: `Striving for accuracy, improvement and adopting new technologies to achieve the best quality. `,
+                },
+                {
+                    ru: `Готов воплотить вашу идею мобильного приложения в жизнь с максимальным качеством и профессионализмом.`,
+                    eng: `Ready to bring your mobile app idea to life with the utmost quality and professionalism.`,
+                },
+                {
                     ru: `КАК МЫ МОЖЕМ ВАМ ПОМОЧЬ?`,
                     eng: `HOW CAN WE HELP?`,
                 },
@@ -511,6 +591,7 @@ window.addEventListener('DOMContentLoaded', ()=> {
                 'eng': 'Project Description',
             }
         ]
+
     translateDataLists.forEach(item => {
         let elems = document.querySelectorAll(item['elem'])
         elems.forEach(elem => {
@@ -534,8 +615,7 @@ window.addEventListener('DOMContentLoaded', ()=> {
         }
     })
     function clean(str) {
-        // console.log(str.toLowerCase().trim().replaceAll(' ', '').replaceAll(/(\r\n|\n|\r)/gm, ''));
-        return str.toLowerCase().trim().replaceAll(' ', '').replaceAll(/(\r\n|\n|\r)/gm, '')
+        return str.toLowerCase().trim().replaceAll(' ', '').replaceAll(/(\r\n|\n|\r)/gm, '').replaceAll('>', '').replaceAll('<', '').replaceAll('&gt;', '')
     }
     function changeText(oldText, newText) {
         try {
@@ -547,7 +627,7 @@ window.addEventListener('DOMContentLoaded', ()=> {
                 if (actual == old){
 
                     correctNodes.push(node)
-                    
+
                     correctNodes = correctNodes.reverse()
                     let arr = []
                     for (let n = 0; n < correctNodes.length ; n++){
