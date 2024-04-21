@@ -195,383 +195,337 @@ window.addEventListener('DOMContentLoaded', ()=> {
     window.addEventListener('scroll', checkBlocksVisibility);
 
     // === TRANSLATE === \\\
-    // var translateStatus = 'eng'
-    // let translateSwitch = document.querySelector('.change')
-    // let translateData = [
-    //         {
-    //             ru: 'Увеличение доступности',
-    //             eng: 'Increased accessibility',
-    //             element: '#business_item1 > h4',
-    //             position: 0
-    //         },
-    //         {
-    //             ru: 'Мобильные приложения делают ваш бизнес доступным для клиентов в любое время и в любом месте. Ваши клиенты могут легко получить доступ к вашим услугам или товарам, просто открыв приложение на своем смартфоне.',
-    //             eng: 'Mobile apps make your business available to your customers anytime and anywhere. Your customers can easily access your services or products by simply opening the app on their smartphone. ',
-    //             element: '#business_item1 > p',
-    //             position: 0
-    //         },
-    //         {
-    //             ru: 'Улучшенный маркетинг и взаимодействие с клиентами',
-    //             eng: 'Improved marketing and customer interaction',
-    //             element: '#business_item2 > h4',
-    //             position: 0
-    //         },
-    //         {
-    //             ru: 'Вы можете отправлять им уведомления о специальных предложениях, акциях и новых продуктах, что способствует увеличению лояльности клиентов.',
-    //             eng: 'You can send them notifications about special offers, promotions and new products, which helps to increase customer loyalty.',
-    //             element: '#business_item2 > p',
-    //             position: 0
-    //         },
-    //         {
-    //             ru: 'Повышение удобства и персонализации',
-    //             eng: 'Increased convenience and personalization',
-    //             element: '#business_item3> h4',
-    //             position: 0
-    //         },
-    //         {
-    //             ru: 'Мобильные приложения позволяют создавать персонализированные предложения и услуги для каждого клиента на основе их предпочтений и истории взаимодействия с вашим брендом.',
-    //             eng: 'Mobile apps allow you to create personalised offers and services for each customer based on their preferences and history of interaction with your brand.',
-    //             element: '#business_item3 > p',
-    //             position: 0
-    //         },
-    //         {
-    //             ru: 'Конкурентное преимущество',
-    //             eng: 'Competitive advantage',
-    //             element: '#business_item4> h4',
-    //             position: 0
-    //         },
-    //         {
-    //             ru: 'В настоящее время мобильные приложения уже стали стандартом для большинства бизнесов. Те, кто не использует этот инструмент, рискует отставать от конкурентов.',
-    //             eng: `Nowadays, mobile apps have already become a standard for most businesses. Those that don't utilise this tool risk falling behind the competition.`,
-    //             element: '#business_item4 > p',
-    //             position: 0
-    //         },
-    //         {
-    //             ru: `Наша студия специализируется на <span class="_color-blue">MVP</span>`,
-    //             eng: `Our Studio Specialises In <span class="_color-blue">MVPs</span>`,
-    //             element: `body > section.studio > div > div.studio__info > h2.studio__title`,
-    //             position: 0
-    //         },
-    //         {
-    //             ru: `             `,
-    //             eng: `             `,
-    //             element: `body > section.studio > div > div.studio__info > h5.studio__subtitle`,
-    //             position: 0
-    //         },
-    //         {
-    //             ru: `             `,
-    //             eng: `             `,
-    //             element: `             `,
-    //             position: 0
-    //         },
-    //         {
-    //             ru: `             `,
-    //             eng: `             `,
-    //             element: `             `,
-    //             position: 0
-    //         },
-    //         // {
-    //         //     ru: `             `,
-    //         //     eng: `             `,
-    //         //     element: `             `,
-    //         //     position: 0
-    //         // },
-    //         // {
-    //         //     ru: `             `,
-    //         //     eng: `             `,
-    //         //     element: `             `,
-    //         //     position: 0
-    //         // },
-    //         // {
-    //         //     ru: `             `,
-    //         //     eng: `             `,
-    //         //     element: `             `,
-    //         //     position: 0
-    //         // },
-    //         // {
-    //         //     ru: `             `,
-    //         //     eng: `             `,
-    //         //     element: `             `,
-    //         //     position: 0
-    //         // },
-    //         // {
-    //         //     ru: `             `,
-    //         //     eng: `             `,
-    //         //     element: `             `,
-    //         //     position: 0
-    //         // },
-    //         // {
-    //         //     ru: `             `,
-    //         //     eng: `             `,
-    //         //     element: `             `,
-    //         //     position: 0
-    //         // },
-    //         // {
-    //         //     ru: `             `,
-    //         //     eng: `             `,
-    //         //     element: `             `,
-    //         //     position: 0
-    //         // }
-    //     ]
-
-    // translateSwitch.addEventListener('click', ()=>{
-    //     if (translateStatus == 'ru') {
-    //         translateData.forEach(item => {
-    //             document.querySelectorAll(item['element'])[item['position']].innerHTML = item['eng']
-    //         })
-    //         translateStatus = 'eng'
-    //         return translateStatus
-    //     }
-    //     if (translateStatus == 'eng') {
-    //         translateData.forEach(item => {
-    //             document.querySelectorAll(item['element'])[item['position']].innerHTML = item['ru']
-    //         })
-    //         translateStatus = 'ru'
-    //         return translateStatus
-    //     }
-    // })
-    
     var translateStatus = 'eng'
-    let translateSwitch = document.querySelector('.change'),
-        translateData = [
+    let translateSwitch = document.querySelector('.translate'),
+        translateData = 
+            [
+                {
+                    ru: `От идеи до mVP за 3 месяца`,
+                    eng: `Seamless Solutions for a Mobile World`,
+                },
+                {
+                    ru: `Работаем с лучшим кроссплатформенным решением, которое позволяет создавать качественные мобильные приложения в короткие сроки`,
+                    eng: `Navigate the complexities of the mobile world with our seamless solutions. From concept to launch, we provide comprehensive services to ensure your success.`,
+                },
+                {
+                    ru: `Связаться <i class="contactus__icon icon-arrow1-top-right"></i>`,
+                    eng: `Contact Us <i class="contactus__icon icon-arrow1-top-right"></i>`,
+                },
+                {
+                    ru: `30+ успешно <br>запущенных проектов`,
+                    eng: `30+ successfully <br>launched projects`,
+                },
+                {
+                    ru: `<i class="phone__icon icon-cup"></i>Хакатон ЛЦТ<br>2023`,
+                    eng: `<i class="phone__icon icon-cup"></i> LTC Hackathon <br>2023 Winner!`,
+                },
+                {
+                    ru: `<i class="phone__icon icon-ticket-time"></i> 3 месяца среднее <br>время разработки`,
+                    eng: `<i class="phone__icon icon-ticket-time"></i> 3 months on average <br>for development`,
+                },
+                {
+                    ru: `<i class="phone__icon icon-star"></i> 4.5 звезды - наш <br>рейтингв сторах`,
+                    eng: `<i class="phone__icon icon-star"></i> 4.5 star avg. rating <br>of our apps`,
+                },
+                {
+                    ru: `Технологии нового уровня`,
+                    eng: `Next-level technologies`,
+                },
+                {
+                    ru: 'Мобильное приложение <span class="_color-blue">ключевой инструмент вашего бизнеса</span>',
+                    eng: 'A mobile app is a <span class="_color-blue">key tool for your business</span>',
+                },
+                {
+                    ru: `Раскройте потенциал вашего бизнеса с помощью нашего мобильного приложения. Оптимизируйте работу, привлекайте клиентов и будьте впереди конкурентов.`,
+                    eng: `Unlock the potential of your business with our mobile app. Streamline operations, engage customers, and stay ahead of the competition.`,
+                },
+                {
+                    ru: 'Увеличение доступности',
+                    eng: 'Increased accessibility',
+                },
+                {
+                    ru: 'Мобильные приложения делают ваш бизнес доступным для клиентов в любое время и в любом месте. Ваши клиенты могут легко получить доступ к вашим услугам или товарам, просто открыв приложение на своем смартфоне.',
+                    eng: 'Mobile apps make your business available to your customers anytime and anywhere. Your customers can easily access your services or products by simply opening the app on their smartphone.',
+                },
+                {
+                    ru: 'Улучшенный маркетинг и взаимодействие с клиентами',
+                    eng: 'Improved marketing and customer interaction',
+                },
+                {
+                    ru: 'Вы можете отправлять им уведомления о специальных предложениях, акциях и новых продуктах, что способствует увеличению лояльности клиентов.',
+                    eng: 'You can send them notifications about special offers, promotions and new products, which helps to increase customer loyalty.',
+                },
+                {
+                    ru: 'Повышение удобства и персонализации',
+                    eng: 'Increased convenience and personalization',
+                },
+                {
+                    ru: 'Мобильные приложения позволяют создавать персонализированные предложения и услуги для каждого клиента на основе их предпочтений и истории взаимодействия с вашим брендом.',
+                    eng: 'Mobile apps allow you to create personalised offers and services for each customer based on their preferences and history of interaction with your brand.',
+                },
+                {
+                    ru: 'Конкурентное преимущество',
+                    eng: 'Competitive advantage',
+                },
+                {
+                    ru: 'В настоящее время мобильные приложения уже стали стандартом для большинства бизнесов. Те, кто не использует этот инструмент, рискует отставать от конкурентов.',
+                    eng: `Nowadays, mobile apps have already become a standard for most businesses. Those that don't utilise this tool risk falling behind the competition.`,
+                },
+                {
+                    ru: `Наша студия специализируется на <span class="_color-blue">MVP</span>`,
+                    eng: `Our Studio Specialises In <span class="_color-blue">MVPs</span>`,
+                },
+                {
+                    ru: `Мы приложим все усилия чтобы ваше выпустить ваше приложение в кратчайшие сроки с необходимом функционалом и качественным дизайном.`,
+                    eng: `We will make every effort to release your app in the shortest possible time with the necessary functionality and quality design.`,
+                },
+                {
+                    ru: `Что вы <span class="_color-blue">получите</span>`,
+                    eng: `What you <span class="_color-blue">get</span>`,
+                },
+                {
+                    ru: `Реализацию идеи от опытной команды разработчиков`,
+                    eng: `Discover what awaits you! Explore our offerings and uncover the benefits that await with our products or services. Find out more now!`,
+                },
+                {
+                    ru: `Качественное приложение`,
+                    eng: `Excellence In App Development`,
+                },
+                {
+                    ru: `Вы получите высококачественное приложение, разработанное с применением лучших технологий. Наша команда стремится к безупречности в каждом аспекте приложения, чтобы обеспечить надежность и эффективность.`,
+                    eng: `Quality Application You will get a high quality application developed with the best technology. Our team strives for flawlessness in every aspect of the app to ensure reliability and efficiency.
+                `,
+                },
+                {
+                    ru: `Скорость разработки`,
+                    eng: `Efficiency Redefined`,
+                },
+                {
+                    ru: `Наш подход к разработке основан на эффективности и оптимизации времени. Мы стремимся минимизировать время от идеи до реализации, предлагая быстрые сроки выполнения проекта без потери качества. Это позволяет вам получить ваш продукт на рынок быстрее и опережать конкурентов.`,
+                    eng: `Our development approach is based on efficiency and time optimisation. We aim to minimise the time from idea to implementation, offering fast project turnaround times without sacrificing quality. This allows you to get your product to market faster and ahead of the competition.`,
+                },
+                {
+                    ru: `Удобный и красивый дизайн`,
+                    eng: `Sleek Design, Seamless Experience`,
+                },
+                {
+                    ru: `Ваше приложение будет обладать не только выдающейся функциональностью, но и привлекательным внешним видом. Мы уделяем особое внимание дизайну, создавая удобный и красочный интерфейс, который обеспечит приятный пользовательский опыт.`,
+                    eng: `Your app will not only have outstanding functionality, but also an attractive appearance. We pay special attention to design, creating a user-friendly and colourful interface that will provide a pleasant user experience.`,
+                },
+                {
+                    ru: `Экспертное мнение`,
+                    eng: `Guided By Expert Insight`,
+                },
+                {
+                    ru: `Мы предоставляем не только техническое исполнение, но и экспертное мнение по всем аспектам разработки. Наша команда профессионалов готова поделиться своим опытом и рекомендациями, чтобы ваш проект был не только успешным, но и долгосрочно устойчивым.`,
+                    eng: `We provide not only technical execution but also expert opinion on all aspects of development. Our team of professionals is ready to share their experience and recommendations to make your project not only successful, but also long-term sustainable.
+                    `,
+                },
+                {
+                    ru: `Как мы <span class="_color-blue">работаем</span>`,
+                    eng: `How we <span class="_color-blue">work</span>`,
+                },
+                {
+                    ru: `Обсуждение будущего продукта`,
+                    eng: `Collaboratively Defining Goals, Priorities, and MVP Functionality`,
+                },
+                {
+                    ru: `Вместе определим цели и приоритеты, разобьём проект на этапы и определим необходимый базовый функционал MVP для быстрой проверки гипотез вашей бизнес-модели. Составим детальное Техническое задание и предварительное коммерческое предложение на каждый из этапов создания/развития проекта.`,
+                    eng: `Discussing the future product Together we will define goals and priorities, divide the project into stages and define the necessary basic MVP functionality to quickly test the hypotheses of your business model. We will draw up a detailed Terms of Reference and a preliminary commercial proposal for each of the stages of project creation/development`,
+                },
+                {
+                    ru: `<span class="_color-blue">Преимущества</span> нашей студии`,
+                    eng: `<span class="_color-blue">Advantages</span> of our studio`,
+                },
+                {
+                    ru: `Тщательно продумываем каждый этап разработки`,
+                    eng: `Streamline operations, engage customers, and stay ahead of the competition.`,
+                },
+                {
+                    ru: `Высокий рейтинг в сторах. Все пользователи высоко оценивают качество и дизайн наших приложений`,
+                    eng: `High rating in Stores All users highly appreciate the quality and design of our applications`,
+                },
+                {
+                    ru: `Работаем с AI. Опыт работы интеграцией Chat GPT, Gemini, Midjorney`,
+                    eng: `Working with AI Experience with Chat GPT, Gemini, Midjorney integration`,
+                },
+                {
+                    ru: `Большой опыт в разработке приложений. Наша команда в сфере IT и разработки приложений более 5 лет`,
+                    eng: `Extensive experience in app development Our team has been in IT and app development for over 5 years.`,
+                },
+                {
+                    ru: `Всегда готовы помочь. Мы всегда готовы помочь, объяснить, настроить или просто поговорить. Ваш комфорт – наш приоритет!`,
+                    eng: `Always ready to help We are always ready to help, explain, customise or just talk. Your comfort is our priority!`,
+                },
+                {
+                    ru: `Наши <span class="_color-blue">работы</span>`,
+                    eng: `Our Recent <span class="_color-blue">Work</span>`,
+                },
+                {
+                    ru: `Разрабатываем на Flutter и FlutterFlow. <br>Приложение будет работать как на iOS так и Android <br>и значительно ускорит время разработки.`,
+                    eng: `We develop on Flutter and FlutterFlow The <br>app will work on both iOS and Android and <br>will significantly speed up development time.`,
+                },
+                {
+                    ru: `Наша <span class="_color-blue">команда</span>`,
+                    eng: `Our <span class="_color-blue">Team</span>`,
+                },
+                {
+                    ru: `За каждым успешным проектом стоит специалист своего дела`,
+                    eng: `Behind every successful partnership at XXLDEV`,
+                },
+                {
+                    ru: `Превращаем концепции в реальность`,
+                    eng: `Practice at their pace, pace, filling in gaps in their understanding.`,
+                },
+                {
+                    ru: `Часто Задаваемые вопросы <span class="_color-blue">(FAQ)</span>`,
+                    eng: `Frequently Asked Questions <span class="_color-blue">(FAQ)</span>`,
+                },
+                {
+                    ru: `Какой бюджет я должен выделить на запуск приложения?`,
+                    eng: `What budget should I allocate for launching an app?`,
+                },
+                {
+                    ru: `Бюджет на запуск приложения может сильно варьироваться в зависимости от требуемого функционала, сложности дизайна, платформы (iOS, Android или обе) и других факторов. Мы готовы обсудить ваши требования и предложить оптимальное решение, которое соответствует вашему бюджету.`,
+                    eng: `The budget for launching an app can vary greatly depending on the required functionality, complexity of design, platform (iOS, Android or both) and other factors. We are ready to discuss your requirements and come up with the best solution that fits your budget.`,
+                },
+                {
+                    ru: `Сколько времени потребуется для создания приложения?`,
+                    eng: `How much time will it take to create an app?`,
+                },
+                {
+                    ru: `Время разработки приложения также зависит от его сложности и требований. Мы обычно предоставляем оценку времени после тщательного изучения вашего проекта.`,
+                    eng: `App development time also depends on the complexity and requirements of the app. We usually provide an estimate of time after thoroughly reviewing your project.`,
+                },
+                {
+                    ru: `Почему так быстро вы сможете запустить приложение?`,
+                    eng: `Why will you be able to launch the app so quickly?`,
+                },
+                {
+                    ru: `Наша команда имеет богатый опыт в разработке мобильных приложений и использует современные методы разработки, что позволяет нам оптимизировать процесс и достигать быстрых результатов без ущерба качеству.`,
+                    eng: `Our team has extensive experience in mobile app development and uses modern development methods, which allows us to optimise the process and achieve fast results without compromising on quality.`,
+                },
+                {
+                    ru: `Что от меня нужно, чтобы начать разработку мобильного приложения?`,
+                    eng: `What do I need from me to start mobile app development?`,
+                },
+                {
+                    ru: `Для начала разработки мы нуждаемся в детальном описании вашей идеи или требований к приложению. Чем более подробно вы опишете свои ожидания, тем лучше мы сможем воплотить их в реальность.`,
+                    eng: `To start development, we need a detailed description of your idea or requirements for the app. The more detailed you describe your expectations, the better we can turn them into reality.`,
+                },
+                {
+                    ru: `Осуществляете ли вы поддержку продукта после запуска?`,
+                    eng: `Do you provide post-launch product support?`,
+                },
+                {
+                    ru: `Да, мы предлагаем услуги поддержки продукта после его запуска. Это включает в себя исправление ошибок, обновление функционала, адаптацию под новые версии операционных систем и другие необходимые работы для поддержания приложения в актуальном состоянии.`,
+                    eng: `Yes, we offer post-launch support services. This includes bug fixes, functionality updates, adaptation to new versions of operating systems and other necessary work to keep the application up to date.`,
+                },
+                {
+                    ru: `Подпишете ли вы соглашение о неразглашении?`,
+                    eng: `Will you sign a non-disclosure agreement?`,
+                },
+                {
+                    ru: `Да, мы готовы подписать соглашение о неразглашении (NDA), чтобы обеспечить конфиденциальность вашей идеи и всех связанных с ней данных. Ваша безопасность и уверенность в сохранении конфиденциальности являются для нас приоритетом`,
+                    eng: `Yes, we are ready to sign a non-disclosure agreement (NDA) to ensure the confidentiality of your idea and all related data. Your safety and confidence in maintaining your confidentiality is our priority.`,
+                },
+                {
+                    ru: `Всеволод Коргин`,
+                    eng: `Vsevolod Korgin`,
+                },
+                {
+                    ru: `Соучредитель (Отдел по работе с клиентами)`,
+                    eng: `Co-founder (Client Service)`,
+                },
+                {
+                    ru: `В продажах и управлении IT проектами с 2005 года;`,
+                    eng: `In sales and IT project management since 2005;`,
+                },
+                {
+                    ru: `Кайфую от упаковки и структурирования идеи клиента, вижу детали и развилки благодаря своему разностороннему накопленному опыту;`,
+                    eng: `I get high from packaging and structuring the client's idea, I see details and forks thanks to my versatile accumulated experience;`,
+                },
+                {
+                    ru: `Максимально оперативно, профессионально и с индивидуальным подходом доведу Вашу идею до наилучшего результата;`,
+                    eng: `I will bring your idea to the best result as quickly as possible, professionally and with an individual approach;`,
+                },
+                {
+                    ru: `Помогу подобрать оптимальный набор  инструментов и решений как по деньгам, так и по наполнению для крутой  реализации Вашей идеи.`,
+                    eng: `I will help you to choose the optimal set of tools and solutions both in terms of money and content for the cool realization of your idea.`,
+                },
+                {
+                    ru: `Студия это мечта, к которой я шёл всю свою жизнь, ради которой я накапливал опыт и набивал шишки`,
+                    eng: `Studio is a dream, to which I have been going all my life, for the sake of which I have been accumulating experience and kicking up bumps.`,
+                },
+                {
+                    ru: `КАК МЫ МОЖЕМ ВАМ ПОМОЧЬ?`,
+                    eng: `HOW CAN WE HELP?`,
+                },
+                {
+                    ru: `Начните создание вашего приложения!`,
+                    eng: `Let's Plan For Your Next Level!`,
+                },
+                {
+                    ru: `Отправляя эту форму, я подтверждаю, что прочитал и принимаю <a href="#" class="form__link">политику конфиденциальности</a>`,
+                    eng: `By sending this form I confirm that I have read and accept the <a href="#" class="form__link">Privacy Policy</a>`,
+                },
+                {
+                    ru: `Отправить<i class="form__icon icon-mail"></i>`,
+                    eng: `Submit<i class="form__icon icon-mail"></i>`,
+                },
+                {
+                    ru: `Специализируясь на создании высококачественных мобильных приложений на Flutter, мы предлагаем решения, сочетающие в себе удобство, скорость и адаптивность. Мы верим, что креативность и внимание к деталям - это ключ к созданию уникальных продуктов, которые выделяются на рынке.`,
+                    eng: `Specializing in building high-quality mobile applications on Flutter, we offer solutions that combine usability, speed and adaptability. We believe that creativity and attention to detail is the key to creating unique products that stand out in the market.`,
+                },
+                {
+                    ru: `Казахстан, Алматы <br> +7 700 420 5555`,
+                    eng: `Kazakhstan, Almaty <br> +7 700 420 5555`,
+                },
+                {
+                    ru: `Санкт-Петербург, Россия <br>+7 960 273 87 03 `,
+                    eng: `St. Petersburg, Russia <br>+7 960 273 87 03 `,
+                },
+                {
+                    ru: `контакты`,
+                    eng: `CONTACT`,
+                },
+                {
+                    ru: `соц. сети`,
+                    eng: `FOLLOW US`,
+                },
+            ],
+        translateDataLists = [
             {
-                ru: 'Мобильное приложение <span class="_color-blue">ключевой инструмент вашего бизнеса</span>',
-                eng: 'A mobile app is a <span class="_color-blue">key tool for your business</span>',
+                'ru': 'Шаг ',
+                'eng': 'Step ',
+                'elem': '.steps__tab'
+            }
+        ],
+        translateDataInputs = [
+            {
+                'ru': 'Имя',
+                'eng': 'Name',
             },
             {
-                ru: 'Увеличение доступности',
-                eng: 'Increased accessibility',
-            },
-            {
-                ru: 'Мобильные приложения делают ваш бизнес доступным для клиентов в любое время и в любом месте. Ваши клиенты могут легко получить доступ к вашим услугам или товарам, просто открыв приложение на своем смартфоне.',
-                eng: 'Mobile apps make your business available to your customers anytime and anywhere. Your customers can easily access your services or products by simply opening the app on their smartphone.',
-            },
-            {
-                ru: 'Улучшенный маркетинг и взаимодействие с клиентами',
-                eng: 'Improved marketing and customer interaction',
-            },
-            {
-                ru: 'Вы можете отправлять им уведомления о специальных предложениях, акциях и новых продуктах, что способствует увеличению лояльности клиентов.',
-                eng: 'You can send them notifications about special offers, promotions and new products, which helps to increase customer loyalty.',
-            },
-            {
-                ru: 'Повышение удобства и персонализации',
-                eng: 'Increased convenience and personalization',
-            },
-            {
-                ru: 'Мобильные приложения позволяют создавать персонализированные предложения и услуги для каждого клиента на основе их предпочтений и истории взаимодействия с вашим брендом.',
-                eng: 'Mobile apps allow you to create personalised offers and services for each customer based on their preferences and history of interaction with your brand.',
-            },
-            {
-                ru: 'Конкурентное преимущество',
-                eng: 'Competitive advantage',
-            },
-            {
-                ru: 'В настоящее время мобильные приложения уже стали стандартом для большинства бизнесов. Те, кто не использует этот инструмент, рискует отставать от конкурентов.',
-                eng: `Nowadays, mobile apps have already become a standard for most businesses. Those that don't utilise this tool risk falling behind the competition.`,
-            },
-            {
-                ru: `Наша студия специализируется на <span class="_color-blue">MVP</span>`,
-                eng: `Our Studio Specialises In <span class="_color-blue">MVPs</span>`,
-            },
-            {
-                ru: `Мы приложим все усилия чтобы ваше выпустить ваше приложение в кратчайшие сроки с необходимом функционалом и качественным дизайном.`,
-                eng: `We will make every effort to release your app in the shortest possible time with the necessary functionality and quality design.`,
-            },
-            {
-                ru: `Что вы <span class="_color-blue">получите</span>`,
-                eng: `What you <span class="_color-blue">get</span>`,
-            },
-            {
-                ru: `Качественное приложение`,
-                eng: `Excellence In App Development`,
-            },
-            {
-                ru: `Вы получите высококачественное приложение, разработанное с применением лучших технологий. Наша команда стремится к безупречности в каждом аспекте приложения, чтобы обеспечить надежность и эффективность.`,
-                eng: `Quality Application You will get a high quality application developed with the best technology. Our team strives for flawlessness in every aspect of the app to ensure reliability and efficiency.
-            `,
-            },
-            {
-                ru: `Скорость разработки`,
-                eng: `Speed of development`,
-            },
-            {
-                ru: `Наш подход к разработке основан на эффективности и оптимизации времени. Мы стремимся минимизировать время от идеи до реализации, предлагая быстрые сроки выполнения проекта без потери качества. Это позволяет вам получить ваш продукт на рынок быстрее и опережать конкурентов.`,
-                eng: `Our development approach is based on efficiency and time optimisation. We aim to minimise the time from idea to implementation, offering fast project turnaround times without sacrificing quality. This allows you to get your product to market faster and ahead of the competition.`,
-            },
-            {
-                ru: `Правильный UX/UI дизайн`,
-                eng: `Proper UX/UI design`,
-            },
-            {
-                ru: `Экспертное мнение`,
-                eng: `Expert Opinion`,
-            },
-            {
-                ru: `Мы предоставляем не только техническое исполнение, но и экспертное мнение по всем аспектам разработки. Наша команда профессионалов готова поделиться своим опытом и рекомендациями, чтобы ваш проект был не только успешным, но и долгосрочно устойчивым.`,
-                eng: `Your app will not only have outstanding functionality, but also an attractive appearance. We pay special attention to design, creating a user-friendly and colourful interface that will provide a pleasant user experience.`,
-            },
-            {
-                ru: `Как мы работаем`,
-                eng: `How we work`,
-            },
-            {
-                ru: `Обсуждение будущего продукта`,
-                eng: `Discussing the future product`,
-            },
-            {
-                ru: `Вместе определим цели и приоритеты, разобьём проект на этапы и определим необходимый базовый функционал MVP для быстрой проверки гипотез вашей бизнес-модели. Составим детальное Техническое задание и предварительное коммерческое предложение на каждый из этапов создания/развития проекта.`,
-                eng: `Together we will define goals and priorities, divide the project into stages and define the necessary basic MVP functionality to quickly test the hypotheses of your business model. We will draw up a detailed Terms of Reference and a preliminary commercial proposal for each of the stages of project creation/development.`,
-            },
-            {
-                ru: `Создание Дизайна и прототипа`,
-                eng: `Design and prototype creation`,
-            },
-            {
-                ru: `Создадим дизайн и кликабельный прототип интерфейса будущего сервиса. Мы воспроизведём структуру сервиса и сможем вместе продумать основные сценарии пользовательского поведения. Прототипирование позволит учесть максимум мелочей, тем самым сэкономив часы на дальнейших этапах.`,
-                eng: `We will create a design and clickable prototype of the interface of the future service. We will reproduce the structure of the service and together we will be able to think through the main scenarios of user behaviour. Prototyping will allow us to take into account maximum details, thus saving hours at further stages.`,
-            },
-            {
-                ru: `Разработка проекта`,
-                eng: `Project development`,
-            },
-            {
-                ru: `После внесения необходимых корректировок в документации и дизайна, дадим итоговые оценки этапов по времени и стоимости. Соберём из наших сотрудников команду, ответственную за разработку продукта, составим и подпишем необходимые документы (договоры и приложения со сметами) и начнем реализовывать вашу идею в реальный продукт гарантируя качество и поэтапную отчетность в процессе работы`,
-                eng: `After making the necessary adjustments to the documentation and design, we will give final estimates of the stages in terms of time and cost. We will assemble a team of our employees responsible for product development, draw up and sign the necessary documents (contracts and annexes with estimates) and start implementing your idea into a real product, guaranteeing quality and step-by-step reporting during the work process.`,
-            },
-            {
-                ru: `Тестирование > Запуск > Тех поддержка`,
-                eng: `Testing > Launch > Tech Support`,
-            },
-            {
-                ru: `Проводим функциональное тестирование на наличие багов. Адаптируем приложение на разные разрешения телефонов. Оформляем страницу приложения и публикуем в магазины App Store и Google Play. Следим за стабильностью работы приложения осуществляя тех поддержку.`,
-                eng: `We conduct functional testing for bugs. Adapt the application for different phone resolutions. We design the application page and publish it to the App Store and Google Play shops. We monitor the stability of the application by providing technical support.`,
-            },
-            {
-                ru: `Преимущества нашей студии`,
-                eng: `Advantages of our studio`,
-            },
-            {
-                ru: `Высокий рейтинг в сторах. Все пользователи высоко оценивают качество и дизайн наших приложений`,
-                eng: `High rating in Stores All users highly appreciate the quality and design of our applications`,
-            },
-            {
-                ru: `Работаем с AI. Опыт работы интеграцией Chat GPT, Gemini, Midjorney`,
-                eng: `Working with AI Experience with Chat GPT, Gemini, Midjorney integration.`,
-            },
-            {
-                ru: `Большой опыт в разработке приложений. Наша команда в сфере IT и разработки приложений более 5 лет`,
-                eng: `Extensive experience in app development Our team has been in IT and app development for over 5 years.`,
-            },
-            {
-                ru: `Разрабатываем на Flutter и FlutterFlow. Приложение будет работать как на iOS так и Android и значительно ускорит время разработки.`,
-                eng: `We develop on Flutter and FlutterFlow The app will work on both iOS and Android and will significantly speed up development time.`,
-            },
-            {
-                ru: `Всегда готовы помочь. Мы всегда готовы помочь, объяснить, настроить или просто поговорить. Ваш комфорт – наш приоритет!`,
-                eng: `Always ready to help We are always ready to help, explain, customise or just talk. Your comfort is our priority!`,
-            },
-            {
-                ru: `Наши <span class="_color-blue">работы</span>`,
-                eng: `Our Recent <span class="_color-blue">Work</span>`,
-            },
-            {
-                ru: `Часто Задаваемые вопросы <span class="_color-blue">(FAQ)</span>`,
-                eng: `Frequently Asked Questions <span class="_color-blue">(FAQ)</span>`,
-            },
-            {
-                ru: `Какой бюджет я должен выделить на запуск приложения?`,
-                eng: `What budget should I allocate for launching an app?`,
-            },
-            {
-                ru: `Бюджет на запуск приложения может сильно варьироваться в зависимости от требуемого функционала, сложности дизайна, платформы (iOS, Android или обе) и других факторов. Мы готовы обсудить ваши требования и предложить оптимальное решение, которое соответствует вашему бюджету.`,
-                eng: `The budget for launching an app can vary greatly depending on the required functionality, complexity of design, platform (iOS, Android or both) and other factors. We are ready to discuss your requirements and come up with the best solution that fits your budget.`,
-            },
-            {
-                ru: `Сколько времени потребуется для создания приложения?`,
-                eng: `How much time will it take to create an app?`,
-            },
-            {
-                ru: `Время разработки приложения также зависит от его сложности и требований. Мы обычно предоставляем оценку времени после тщательного изучения вашего проекта.`,
-                eng: `App development time also depends on the complexity and requirements of the app. We usually provide an estimate of time after thoroughly reviewing your project.`,
-            },
-            {
-                ru: `Почему так быстро вы сможете запустить приложение?`,
-                eng: `Why will you be able to launch the app so quickly?`,
-            },
-            {
-                ru: `Наша команда имеет богатый опыт в разработке мобильных приложений и использует современные методы разработки, что позволяет нам оптимизировать процесс и достигать быстрых результатов без ущерба качеству.`,
-                eng: `Our team has extensive experience in mobile app development and uses modern development methods, which allows us to optimise the process and achieve fast results without compromising on quality.`,
-            },
-            {
-                ru: `Что от меня нужно, чтобы начать разработку мобильного приложения?`,
-                eng: `What do I need from me to start mobile app development?`,
-            },
-            {
-                ru: `Для начала разработки мы нуждаемся в детальном описании вашей идеи или требований к приложению. Чем более подробно вы опишете свои ожидания, тем лучше мы сможем воплотить их в реальность.`,
-                eng: `To start development, we need a detailed description of your idea or requirements for the app. The more detailed you describe your expectations, the better we can turn them into reality.`,
-            },
-            {
-                ru: `Осуществляете ли вы поддержку продукта после запуска?`,
-                eng: `Do you provide post-launch product support?`,
-            },
-            {
-                ru: `Да, мы предлагаем услуги поддержки продукта после его запуска. Это включает в себя исправление ошибок, обновление функционала, адаптацию под новые версии операционных систем и другие необходимые работы для поддержания приложения в актуальном состоянии.`,
-                eng: `Yes, we offer post-launch support services. This includes bug fixes, functionality updates, adaptation to new versions of operating systems and other necessary work to keep the application up to date.`,
-            },
-            {
-                ru: `Подпишете ли вы соглашение о неразглашении?`,
-                eng: `Will you sign a non-disclosure agreement?`,
-            },
-            {
-                ru: `Да, мы готовы подписать соглашение о неразглашении (NDA), чтобы обеспечить конфиденциальность вашей идеи и всех связанных с ней данных. Ваша безопасность и уверенность в сохранении конфиденциальности являются для нас приоритетом`,
-                eng: `Yes, we are ready to sign a non-disclosure agreement (NDA) to ensure the confidentiality of your idea and all related data. Your safety and confidence in maintaining your confidentiality is our priority.`,
-            },
-            {
-                ru: `Всеволод Коргин`,
-                eng: `Vsevolod Korgin`,
-            },
-            {
-                ru: `Соучредитель (Отдел по работе с клиентами)`,
-                eng: `Co-founder (Client Service)`,
-            },
-            {
-                ru: `В продажах и управлении IT проектами с 2005 года`,
-                eng: `In sales and IT project management since 2005`,
-            },
-            {
-                ru: `Кайфую от упаковки и структурирования идеи клиента, вижу детали и развилки благодаря своему разностороннему накопленному опыту;`,
-                eng: `I get high from packaging and structuring the client's idea, I see details and forks thanks to my versatile accumulated experience;`,
-            },
-            {
-                ru: `Максимально оперативно, профессионально и с индивидуальным подходом доведу Вашу идею до наилучшего результата`,
-                eng: `I will bring your idea to the best result as quickly as possible, professionally and with an individual approach`,
-            },
-            {
-                ru: `Помогу подобрать оптимальный набор  инструментов и решений как по деньгам, так и по наполнению для крутой  реализации Вашей идеи.`,
-                eng: `I will help you to choose the optimal set of tools and solutions both in terms of money and content for the cool realization of your idea.`,
-            },
-            {
-                ru: `Студия это мечта, к которой я шёл всю свою жизнь, ради которой я накапливал опыт и набивал шишки`,
-                eng: `Studio is a dream, to which I have been going all my life, for the sake of which I have been accumulating experience and kicking up bumps.`,
-            },
+                'ru': 'Описание проекта',
+                'eng': 'Project Description',
+            }
         ]
-        
+    translateDataLists.forEach(item => {
+        let elems = document.querySelectorAll(item['elem'])
+        elems.forEach(elem => {
+            translateData.push({
+                'ru': translateStatus == 'eng' ? elem.textContent.replace(item['eng'], item['ru']) : elem.textContent,
+                'eng': translateStatus == 'eng' ? elem.textContent : elem.textContent.replace(item['ru'], item['eng'])
+            })
+        })
+    })
     translateSwitch.addEventListener('click', ()=>{
-        if (translateStatus == 'ru') {
-            translateData.forEach(item => {
-                changeText(item['ru'], item['eng'])
-            })
-            translateStatus = 'eng'
-            return translateStatus
-        }
-        if (translateStatus == 'eng') {
-            translateData.forEach(item => {
-                changeText(item['eng'], item['ru'])
-            })
-            translateStatus = 'ru'
-            return translateStatus
-        }
+        translateData.forEach(item => {
+            translateStatus == 'ru' ? changeText(item['ru'], item['eng']) : changeText(item['eng'], item['ru'])
+        })
+        translateStatus == 'ru' ? translateStatus = 'eng' : translateStatus = 'ru'
+        return translateStatus
     })
     let nodes = []
     document.querySelectorAll('*').forEach(item => {
@@ -579,52 +533,91 @@ window.addEventListener('DOMContentLoaded', ()=> {
             nodes.push(item)
         }
     })
+    function clean(str) {
+        // console.log(str.toLowerCase().trim().replaceAll(' ', '').replaceAll(/(\r\n|\n|\r)/gm, ''));
+        return str.toLowerCase().trim().replaceAll(' ', '').replaceAll(/(\r\n|\n|\r)/gm, '')
+    }
     function changeText(oldText, newText) {
         try {
             let correctNodes = []
             nodes.forEach(node => {
-                let actual = node.innerHTML.toLowerCase().replace('^\\p{L}*$').trim(),
-                    old = oldText.toLowerCase().replace('^\\p{L}*$').trim()
+                let actual = clean(node.innerHTML),
+                    old = clean(oldText)
+                    
                 if (actual == old){
+
                     correctNodes.push(node)
+                    
+                    correctNodes = correctNodes.reverse()
+                    let arr = []
+                    for (let n = 0; n < correctNodes.length ; n++){
+                        if (correctNodes[n].innerText == correctNodes[0].innerText) {
+                            arr.push(correctNodes[n])
+                        }
+                    }
+                    if (arr.length > 1){
+                        arr.forEach(item => {
+                            item.innerHTML = newText
+                        })
+                    }
+                    else{
+                        correctNodes[0].innerHTML = newText
+                    }
+                }
+                else if (node.childNodes[0].nodeValue && node.childNodes[0].nodeValue.length > 0){
+
+                    let e1 = clean(node.childNodes[0].nodeValue),
+                        e2 = clean(oldText.split('<br>')[0]),
+                        newTextArr = newText.split('<br>')
+
+                    if (e1.includes(e2)){
+                        for (let n = 0; n < node.childNodes.length - 1; n++){
+                            try {
+
+                                if (node.childNodes[n].nodeName == '#text'){
+                                    node.childNodes[n].nodeValue = newTextArr[0]
+                                    newTextArr.shift()
+                                }
+                            }
+                            catch(err) { console.log(err); }
+                        }
+                    }
+
                 }
             })
-            correctNodes = correctNodes.reverse()
-            // console.log(correctNodes);
-            let arr = []
-            for (let n = 0; n < correctNodes.length - 1; n++){
-                if (correctNodes[n].innerHTML == correctNodes[0].innerHTML) {
-                    arr.push(correctNodes[n])
-                }
-            }
-            if (arr.length > 1){
-                arr.forEach(item => {
-                    item.innerHTML = newText
-                })
-            }
-            else{
-                correctNodes[0].innerHTML = newText
-            }
         }
         catch(err){
-            console.log(err);
+            console.log('Error with text "' + oldText + '": ' + err);
         }
-    }
 
-    function charCount(str, char) {
-        var count = 0;
-        for(var i = str.length; i--;) {
-          if(str[i] === char) count++;
-        }
-        return count;
-      }
-    function cleanText(str) {
-        for (let n = 0; n < str.split('</').length; n++){
-            str = str.replace(str.slice(str.indexOf('<'),str.indexOf('>')+1), "")
-            str = str.replace(str.slice(str.indexOf('</'),str.indexOf('>')+1), "")
-        }
-        return str
+        let fields = []
+
+        document.querySelectorAll('input').forEach(item => {fields.push(item)})
+        document.querySelectorAll('textarea').forEach(item => {fields.push(item)})
+
+        fields.forEach(field => {
+            translateDataInputs.forEach(val => {
+                if (translateStatus == 'eng') {
+                    clean(val['eng']) == clean(field.getAttribute('placeholder')) ? field.placeholder = val['ru'] : ''
+                }
+                if (translateStatus == 'ru') {
+                    clean(val['ru']) == clean(field.getAttribute('placeholder')) ? field.placeholder = val['eng'] : ''
+                }
+            })
+        })
     }
+    // === FORM SEND === \\\
+    $("#feedback__form").submit(function (e) { // Устанавливаем событие отправки для формы с id=form
+        e.preventDefault();
+         $.ajax({
+             type: "POST", // Метод отправки
+             url: "send.php", // Путь до php файла отправителя
+             data: $(this).serialize(),
+             success: function () {
+                 alert("Ваша заявка отправлена!");
+             }
+         });
+    });
     // === RADIO BUTTONS === \\
     // let radios = document.querySelectorAll('.radio')
 

@@ -40,16 +40,6 @@ img
 
 @font-face
 {
-    font-family: 'icons';
-    font-weight: 400;
-    font-style: normal;
-
-    font-display: swap;
-    src: url('../fonts/icons.woff') format('woff'), url('../fonts/icons.woff2') format('woff2');
-}
-
-@font-face
-{
     font-family: 'Montserrat';
     font-weight: 700;
     font-style: normal;
@@ -80,12 +70,22 @@ img
 
 @font-face
 {
-    font-family: 'Montserrat';
-    font-weight: 300;
+    font-family: 'icons';
+    font-weight: 400;
     font-style: normal;
 
     font-display: swap;
-    src: url('../fonts/Montserrat-Light.woff') format('woff'), url('../fonts/Montserrat-Light.woff2') format('woff2');
+    src: url('../fonts/icons.woff') format('woff'), url('../fonts/icons.woff2') format('woff2');
+}
+
+@font-face
+{
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-style: normal;
+
+    font-display: swap;
+    src: url('../fonts/Montserrat-Medium.woff') format('woff'), url('../fonts/Montserrat-Medium.woff2') format('woff2');
 }
 
 @font-face
@@ -101,11 +101,11 @@ img
 @font-face
 {
     font-family: 'Montserrat';
-    font-weight: 500;
+    font-weight: 300;
     font-style: normal;
 
     font-display: swap;
-    src: url('../fonts/Montserrat-Medium.woff') format('woff'), url('../fonts/Montserrat-Medium.woff2') format('woff2');
+    src: url('../fonts/Montserrat-Light.woff') format('woff'), url('../fonts/Montserrat-Light.woff2') format('woff2');
 }
 
 @font-face
