@@ -26,13 +26,15 @@ window.addEventListener('DOMContentLoaded', ()=> {
             if (window.pageYOffset == 0){
                 header.classList.remove('_scroll')
             }
-            // if (window.pageYOffset > document.documentElement.clientHeight ){
-            //     header.classList.add('_scroll')
-            // }
-            // else{
-            //     header.classList.remove('_scroll')
-            // }
         })
+    }
+    else {
+        if (window.pageYOffset > document.documentElement.clientHeight ){
+            header.classList.add('_scroll')
+        }
+        else{
+            header.classList.remove('_scroll')
+        }
     }
     // window.addEventListener('scroll', ()=>{
     //     if (window.pageYOffset > 0 ){
