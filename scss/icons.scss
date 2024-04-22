@@ -1,0 +1,178 @@
+@font-face {
+    font-family: 'icons';
+    src:  url('fonts/icons.eot?aa9m0j');
+    src:  url('fonts/icons.eot?aa9m0j#iefix') format('embedded-opentype'),
+      url('fonts/icons.ttf?aa9m0j') format('truetype'),
+      url('fonts/icons.woff?aa9m0j') format('woff'),
+      url('fonts/icons.svg?aa9m0j#icons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+i {
+  display: inline-flex;
+  font-family: 'icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-size: 40px;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  &::before{
+    transition: .2s;
+  }
+}
+// .icon-microphone, .icon-fileshare {
+//   font-size: 20px;
+// }
+// .icon-instagram, .icon-facebook, .icon-fileshare {
+//   font-size: 20px;
+// }
+
+.icon-arrow2-top:before {
+  content: "\e907";
+  color: #f5f7f9;
+  transform: rotate(270deg);
+}
+.icon-arrow2-bottom:before {
+  content: "\e907";
+  color: #f5f7f9;
+  transform: rotate(90deg);
+}
+.icon-arrow2-left:before {
+  content: "\e907";
+  color: #f5f7f9;
+  transform: rotate(180deg);
+}
+.icon-arrow2-right:before {
+  content: "\e907";
+  color: #f5f7f9;
+}
+
+.icon-instagram2:before {
+  content: "\e90c";
+  color: #f5f7f9;
+}
+.icon-medal .path1:before {
+  content: "\e911";
+  color: rgb(96, 93, 244);
+}
+.icon-medal .path2:before {
+  content: "\e918";
+  margin-left: -0.9833984375em;
+  color: rgb(96, 93, 244);
+}
+.icon-medal .path3:before {
+  content: "\e919";
+  margin-left: -0.9833984375em;
+  color: rgb(96, 93, 244);
+}
+.icon-medal .path4:before {
+  content: "\e91a";
+  margin-left: -0.9833984375em;
+  color: rgb(96, 93, 244);
+  opacity: 0.4;
+}
+.icon-medal .path5:before {
+  content: "\e91b";
+  margin-left: -0.9833984375em;
+  color: rgb(96, 93, 244);
+}
+.icon-whatsapp:before {
+  content: "\e91c";
+  color: #f5f7f9;
+}
+.icon-telegram2:before {
+  content: "\e91d";
+  color: #f5f7f9;
+  margin-left: -0.25rem;
+  transform: scale(0.85);
+}
+.icon-quote-first:before {
+  content: "\e915";
+  color: #605df4;
+}
+.icon-quote-last:before {
+  content: "\e916";
+  color: #605df4;
+}
+.icon-category:before {
+  content: "\e912";
+  color: #605df4;
+}
+.icon-friends:before {
+  content: "\e913";
+  color: #605df4;
+}
+.icon-graphic:before {
+  content: "\e914";
+  color: #605df4;
+}
+.icon-accessibility1:before {
+  content: "\e917";
+  color: #605df4;
+}
+.icon-telegram:before {
+  content: "\e90d";
+  color: #f5f7f9;
+}
+.icon-microphone:before {
+  content: "\e906";
+}
+.icon-arrow1-top-right:before {
+  content: "\e900";
+}
+.icon-fileshare:before {
+  content: "\e901";
+}
+.icon-instagram:before {
+  content: "\e902";
+  color: #f5f7f9;
+}
+.icon-facebook:before {
+  content: "\e903";
+  color: #f5f7f9;
+}
+.icon-cup:before {
+  content: "\e904";
+  color: #f5f7f9;
+}
+.icon-accessibility:before {
+  content: "\e905";
+  color: #605df4;
+}
+.icon-arrow2-right:before {
+  content: "\e907";
+  color: #f5f7f9;
+}
+.icon-competitive:before {
+  content: "\e908";
+  color: #605df4;
+}
+.icon-google-drive:before {
+  content: "\e909";
+}
+.icon-interaction:before {
+  content: "\e90a";
+  color: #605df4;
+}
+.icon-mail:before {
+  content: "\e90b";
+  color: #5235e8;
+}
+.icon-personalization:before {
+  content: "\e90e";
+  color: #605df4;
+}
+.icon-star:before {
+  content: "\e90f";
+  color: #605df4;
+}
+.icon-ticket-time:before {
+  content: "\e910";
+}

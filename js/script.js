@@ -92,14 +92,10 @@ window.addEventListener('DOMContentLoaded', ()=> {
         beneiftsLastItemTop = 0
 
     if (window.matchMedia('(min-width: 992.1px)').matches){
+        benefitsHeader.style.width = benefitsHeader.offsetWidth + 'px'
         window.addEventListener('scroll', ()=>{
-            if (benefits.getBoundingClientRect().top < 0 && benefits.getBoundingClientRect().top + benefits.offsetHeight - benefitsHeader.offsetHeight - benefitsHeader.getBoundingClientRect().top - benefitsContact.offsetHeight - 24 > 0) {
-                let position = benefitsHeaderTop + (-1 * benefits.getBoundingClientRect().top),
-                    maxTop = benefitsContainer.offsetHeight - benefitsHeader.offsetHeight - benefitsContact.offsetHeight - 24
-    
-                if (position > 0 && position < maxTop) {
-                    benefitsHeader.style.top = position + 'px'
-                }
+            if (benefitsHeaderTop + (-1 * benefits.getBoundingClientRect().top) > 40){
+                benefits.style.transform = 'none'
             }
         })
     }
@@ -251,8 +247,7 @@ window.addEventListener('DOMContentLoaded', ()=> {
             let blockPosition = block.getBoundingClientRect().top;
  
             if (blockPosition < windowHeight * 0.9) {
-                block.style.opacity = "1";
-                block.style.transform = "translateY(0)";
+                block.classList.add('_show')
             }
         });
     }
@@ -268,7 +263,7 @@ window.addEventListener('DOMContentLoaded', ()=> {
             [
                 {
                     ru: `От идеи до MVP за 3 месяца`,
-                    eng: `Seamless Solutions for a Mobile World`,
+                    eng: `Seamless Solutions For a Mobile World`,
                 },
                 {
                     ru: `Работаем с лучшим кроссплатформенным решением, которое позволяет создавать качественные мобильные приложения в короткие сроки`,

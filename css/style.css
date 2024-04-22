@@ -104,6 +104,15 @@ section
     opacity: 0;
 }
 
+section._show
+{
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
+
+    opacity: 1;
+}
+
 h1
 {
     font-size: 58px;
@@ -1738,8 +1747,6 @@ span
 
 .benefits
 {
-    overflow: hidden;
-
     padding-top: 134px;
 }
 
@@ -1754,13 +1761,15 @@ span
 
 .benefits__header
 {
-    position: relative;
+    position: sticky;
+    top: 80px;
 
+    margin-bottom: 80px;
     padding: 4% 0;
 
-    -webkit-transition: .5s;
-         -o-transition: .5s;
-            transition: .5s;
+    -webkit-transition: 0s;
+         -o-transition: 0s;
+            transition: 0s;
 
     background-color: #050e1b;
 
@@ -1967,13 +1976,12 @@ span
 {
     padding: 0 99px 18px 53px;
 
-    background-color: rgba(5, 14, 27, .98);
     background-image: url('./../img/background/advantages-item1-bg.png');
     background-repeat: no-repeat;
-    background-size: 95.5% 95.5%;
+    background-size: 100% 100%;
+    background-size: 100% 100%;
 
     grid-area: _1;
-    background-blend-mode: multiply;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
