@@ -1469,10 +1469,37 @@ span
     color: #605df4;
 }
 
+@-webkit-keyframes down
+{
+    from
+    {
+        top: -100%;
+    }
+
+    to
+    {
+        top: 0;
+    }
+}
+
+@keyframes down
+{
+    from
+    {
+        top: -100%;
+    }
+
+    to
+    {
+        top: 0;
+    }
+}
+
 .header
 {
-    position: fixed;
+    position: absolute;
     z-index: 3;
+    top: 0;
     left: 0;
 
     width: 100%;
@@ -1481,7 +1508,13 @@ span
 
 .header._scroll
 {
+    position: fixed;
+    top: -100%;
+
     padding: 20px 0;
+
+    -webkit-animation: down .5s forwards;
+            animation: down .5s forwards;
 
     background-color: #091526;
 }

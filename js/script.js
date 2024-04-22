@@ -8,14 +8,40 @@ window.addEventListener('DOMContentLoaded', ()=> {
         headerMenu = header.querySelector('.header__menu'),
         menuItems = header.querySelectorAll('.menu__item')
 
-    window.addEventListener('scroll', ()=>{
-        if (window.pageYOffset > 0 ){
-            header.classList.add('_scroll')
-        }
-        else{
-            header.classList.remove('_scroll')
-        }
-    })
+
+    
+    if (window.matchMedia('(min-width: 992px)').matches){
+        let oldScrollTopPosition = 0
+        window.addEventListener('scroll', ()=>{
+            console.log(window.pageYOffset);
+            const scrollTopPosition = document.documentElement.scrollTop;
+            if (oldScrollTopPosition > scrollTopPosition) {
+                header.classList.add('_scroll')
+            }
+            else{
+                header.classList.remove('_scroll')
+            }
+            
+            oldScrollTopPosition = scrollTopPosition;
+            if (window.pageYOffset == 0){
+                header.classList.remove('_scroll')
+            }
+            // if (window.pageYOffset > document.documentElement.clientHeight ){
+            //     header.classList.add('_scroll')
+            // }
+            // else{
+            //     header.classList.remove('_scroll')
+            // }
+        })
+    }
+    // window.addEventListener('scroll', ()=>{
+    //     if (window.pageYOffset > 0 ){
+    //         header.classList.add('_scroll')
+    //     }
+    //     else{
+    //         header.classList.remove('_scroll')
+    //     }
+    // })
 
     headerBurger.addEventListener('click', toggleMenu)
     menuItems.forEach(item => {
