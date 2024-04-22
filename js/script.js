@@ -10,7 +10,7 @@ window.addEventListener('DOMContentLoaded', ()=> {
 
 
     
-    if (window.matchMedia('(min-width: 992px)').matches){
+    if (window.matchMedia('(max-width: 992px)').matches){
         let oldScrollTopPosition = 0
         window.addEventListener('scroll', ()=>{
             console.log(window.pageYOffset);
@@ -29,21 +29,15 @@ window.addEventListener('DOMContentLoaded', ()=> {
         })
     }
     else {
-        if (window.pageYOffset > document.documentElement.clientHeight ){
-            header.classList.add('_scroll')
-        }
-        else{
-            header.classList.remove('_scroll')
-        }
+        window.addEventListener('scroll', ()=>{
+            if (window.pageYOffset > 0 ){
+                header.classList.add('_scroll')
+            }
+            else{
+                header.classList.remove('_scroll')
+            }
+        })
     }
-    // window.addEventListener('scroll', ()=>{
-    //     if (window.pageYOffset > 0 ){
-    //         header.classList.add('_scroll')
-    //     }
-    //     else{
-    //         header.classList.remove('_scroll')
-    //     }
-    // })
 
     headerBurger.addEventListener('click', toggleMenu)
     menuItems.forEach(item => {
