@@ -85,6 +85,11 @@ body
     --containerPositionIndent: 0;
 }
 
+body._ru .title
+{
+    text-transform: unset;
+}
+
 section
 {
     -webkit-transition: opacity .5s, -webkit-transform .5s;
@@ -201,8 +206,8 @@ span
 
 .menu__link
 {
-    font-size: 64px;
-    line-height: 98px;
+    font-size: 40px;
+    line-height: 54px;
 }
 
 .menu__link:hover
@@ -1700,6 +1705,8 @@ span
 
 .benefits
 {
+    overflow: hidden;
+
     padding-top: 134px;
 }
 
@@ -1714,7 +1721,15 @@ span
 
 .benefits__header
 {
+    position: relative;
+
     padding: 4% 0;
+
+    -webkit-transition: .5s;
+         -o-transition: .5s;
+            transition: .5s;
+
+    background-color: #050e1b;
 
     grid-area: header;
 }
@@ -1722,6 +1737,8 @@ span
 .benefits__title
 {
     margin-bottom: 12px;
+
+    text-align: left;
 }
 
 .benefits__contact
@@ -1748,6 +1765,8 @@ span
 
 .benefits__item
 {
+    position: relative;
+
     padding: 32px 50px;
 
     border-radius: 20px;
@@ -2127,6 +2146,8 @@ span
 .projects__app
 {
     position: absolute;
+
+    max-width: 123px;
 }
 
 .projects__app._appstore
@@ -2492,6 +2513,9 @@ span
 
 .footer__text
 {
+    font-size: 12px;
+    line-height: 18px;
+
     color: #bfbfbf;
 }
 
@@ -2874,6 +2898,11 @@ span
     {
         margin-bottom: 38px;
         padding: 16px 0;
+    }
+
+    .benefits__title
+    {
+        text-align: center;
     }
 
     .benefits__item
@@ -3314,6 +3343,8 @@ span
     {
         font-size: 30px;
         line-height: 36.57px;
+
+        margin: 0 0 32px;
     }
 
     .footer__text

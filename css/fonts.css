@@ -1,21 +1,21 @@
 @font-face
 {
-    font-family: 'icons';
-    font-weight: 400;
-    font-style: normal;
-
-    font-display: swap;
-    src: url('../fonts/icons.woff') format('woff'), url('../fonts/icons.woff2') format('woff2');
-}
-
-@font-face
-{
     font-family: 'JetBrainsMono';
     font-weight: 400;
     font-style: normal;
 
     font-display: swap;
     src: url('../fonts/JetBrainsMono-Regular.woff') format('woff'), url('../fonts/JetBrainsMono-Regular.woff2') format('woff2');
+}
+
+@font-face
+{
+    font-family: 'icons';
+    font-weight: 400;
+    font-style: normal;
+
+    font-display: swap;
+    src: url('../fonts/icons.woff') format('woff'), url('../fonts/icons.woff2') format('woff2');
 }
 
 @font-face
@@ -45,6 +45,26 @@
     font-style: normal;
 
     font-display: swap;
+    src: url('../fonts/Montserrat-LightItalic.woff') format('woff'), url('../fonts/Montserrat-LightItalic.woff2') format('woff2');
+}
+
+@font-face
+{
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-style: normal;
+
+    font-display: swap;
+    src: url('../fonts/Montserrat-Medium.woff') format('woff'), url('../fonts/Montserrat-Medium.woff2') format('woff2');
+}
+
+@font-face
+{
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-style: normal;
+
+    font-display: swap;
     src: url('../fonts/Montserrat-Italic.woff') format('woff'), url('../fonts/Montserrat-Italic.woff2') format('woff2');
 }
 
@@ -60,12 +80,12 @@
 
 @font-face
 {
-    font-family: 'Montserrat';
-    font-weight: 400;
+    font-family: 'Poppins';
+    font-weight: 900;
     font-style: normal;
 
     font-display: swap;
-    src: url('../fonts/Montserrat-LightItalic.woff') format('woff'), url('../fonts/Montserrat-LightItalic.woff2') format('woff2');
+    src: url('../fonts/Poppins-Black.woff') format('woff'), url('../fonts/Poppins-Black.woff2') format('woff2');
 }
 
 @font-face
@@ -76,26 +96,6 @@
 
     font-display: swap;
     src: url('../fonts/Montserrat-Regular.woff') format('woff'), url('../fonts/Montserrat-Regular.woff2') format('woff2');
-}
-
-@font-face
-{
-    font-family: 'Montserrat';
-    font-weight: 500;
-    font-style: normal;
-
-    font-display: swap;
-    src: url('../fonts/Montserrat-Medium.woff') format('woff'), url('../fonts/Montserrat-Medium.woff2') format('woff2');
-}
-
-@font-face
-{
-    font-family: 'Poppins';
-    font-weight: 900;
-    font-style: normal;
-
-    font-display: swap;
-    src: url('../fonts/Poppins-Black.woff') format('woff'), url('../fonts/Poppins-Black.woff2') format('woff2');
 }
 
 @font-face

@@ -5,7 +5,8 @@ window.addEventListener('DOMContentLoaded', ()=> {
     // === HEADER === \\\
     let header = document.querySelector('header'),
         headerBurger = document.querySelector('.burger'),
-        headerMenu = header.querySelector('.header__menu')
+        headerMenu = header.querySelector('.header__menu'),
+        menuItems = header.querySelectorAll('.menu__item')
 
     window.addEventListener('scroll', ()=>{
         if (window.pageYOffset > 0 ){
@@ -17,6 +18,9 @@ window.addEventListener('DOMContentLoaded', ()=> {
     })
 
     headerBurger.addEventListener('click', toggleMenu)
+    menuItems.forEach(item => {
+        item.addEventListener('click', closeMenu)
+    })
     function toggleMenu() {
         headerMenu.classList.toggle('_active')
         headerBurger.classList.toggle('_active')
@@ -35,8 +39,50 @@ window.addEventListener('DOMContentLoaded', ()=> {
         }
     })
 
+    /// === SMOOTH SCROLL === \\\
+    $(document).ready(function(){
+        $('a[href^="#"]').bind('click.smoothscroll',function (e) {
+            e.preventDefault();
+    
+            var target = this.hash,
+                $target = $(target),
+                $header = $('header'),
+                $headerHeight = $header.outerHeight()
+            
+            $('html, body').stop().animate({
+                'scrollTop': $target.offset().top  - $headerHeight - 24}, 
+                0, 'swing', function () {
+                window.location.hash = target;
+            });
+        });
+        
+    });
 
-    // === SLICK SLIDER === \\\
+    /// === WHAT YOU GET === \\\
+    let benefits = document.querySelector('.benefits'),
+        benefitsContainer = document.querySelector('.benefits__container'),
+        benefitsHeight = 0,
+        benefitsHeader = benefits.querySelector('.benefits__header'),
+        benefitsHeaderHeight = benefitsHeader.offsetHeight,
+        benefitsContact = benefits.querySelector('.benefits__contact'),
+        benefitsHeaderTop = 0,
+        beneiftsLastItem = benefits.querySelectorAll('.benefits__item')[benefits.querySelectorAll('.benefits__item').length - 1],
+        beneiftsLastItemTop = 0
+
+    if (window.matchMedia('(min-width: 992.1px)').matches){
+        window.addEventListener('scroll', ()=>{
+            if (benefits.getBoundingClientRect().top < 0 && benefits.getBoundingClientRect().top + benefits.offsetHeight - benefitsHeader.offsetHeight - benefitsHeader.getBoundingClientRect().top - benefitsContact.offsetHeight - 24 > 0) {
+                let position = benefitsHeaderTop + (-1 * benefits.getBoundingClientRect().top),
+                    maxTop = benefitsContainer.offsetHeight - benefitsHeader.offsetHeight - benefitsContact.offsetHeight - 24
+    
+                if (position > 0 && position < maxTop) {
+                    benefitsHeader.style.top = position + 'px'
+                }
+            }
+        })
+    }
+
+    /// === SLICK SLIDER === \\\
     $('.projects__list').slick({
         arrows : true,
         dots: false,
@@ -118,7 +164,7 @@ window.addEventListener('DOMContentLoaded', ()=> {
         // ]
     })
 
-    // === DROPDOWN === \\
+    /// === DROPDOWN === \\\
     let dropdowns = document.querySelectorAll('.dropdown') 
     dropdowns.forEach(item => dropdown(item))
     function dropdown(dropdown) {
@@ -148,7 +194,7 @@ window.addEventListener('DOMContentLoaded', ()=> {
         })
     }
     
-    // === TABS === \\
+    /// === TABS === \\\
     let tabs = document.querySelectorAll('.tabs')
     tabs.forEach(item => {
         let tabsTitles = item.querySelectorAll('.tabs__title'),
@@ -170,10 +216,10 @@ window.addEventListener('DOMContentLoaded', ()=> {
         })
     })
 
-    // === CONTAINER INDENT === \\\
+    /// === CONTAINER INDENT === \\\
     document.body.style.setProperty('--containerPositionIndent', document.querySelector('.startpage__container').offsetLeft + 'px');
 
-    // === ANIMATIONS === \\\
+    /// === ANIMATIONS === \\\
     let blocks = document.querySelectorAll('section');
  
     function checkBlocksVisibility() {
@@ -193,13 +239,13 @@ window.addEventListener('DOMContentLoaded', ()=> {
  
     window.addEventListener('scroll', checkBlocksVisibility);
 
-    // === TRANSLATE === \\\
+    /// === TRANSLATE === \\\
     var translateStatus = 'eng'
     let translateSwitch = document.querySelector('.translate'),
         translateData = 
             [
                 {
-                    ru: `От идеи до mVP за 3 месяца`,
+                    ru: `От идеи до MVP за 3 месяца`,
                     eng: `Seamless Solutions for a Mobile World`,
                 },
                 {
@@ -292,7 +338,7 @@ window.addEventListener('DOMContentLoaded', ()=> {
                 },
                 {
                     ru: `Вы получите высококачественное приложение, разработанное с применением лучших технологий. Наша команда стремится к безупречности в каждом аспекте приложения, чтобы обеспечить надежность и эффективность.`,
-                    eng: `Quality Application You will get a high quality application developed with the best technology. Our team strives for flawlessness in every aspect of the app to ensure reliability and efficiency.
+                    eng: `You will get a high quality application developed with the best technology. Our team strives for flawlessness in every aspect of the app to ensure reliability and efficiency.
                 `,
                 },
                 {
@@ -529,8 +575,7 @@ window.addEventListener('DOMContentLoaded', ()=> {
                     eng: `Specialize in building MVPs, allowing you to quickly turn your ideas into viable products.`,
                 },
                 {
-                    ru: `
-                    Стремлюсь к точности, совершенствованию и внедрению новых технологий для достижения самого лучшего качества. `,
+                    ru: `Стремлюсь к точности, совершенствованию и внедрению новых технологий для достижения самого лучшего качества. `,
                     eng: `Striving for accuracy, improvement and adopting new technologies to achieve the best quality. `,
                 },
                 {
@@ -573,6 +618,46 @@ window.addEventListener('DOMContentLoaded', ()=> {
                     ru: `соц. сети`,
                     eng: `FOLLOW US`,
                 },
+                {
+                    ru: `Главная`,
+                    eng: `Main`,
+                },
+                {
+                    ru: `Приложение`,
+                    eng: `App`,
+                },
+                {
+                    ru: `Студия`,
+                    eng: `Studio`,
+                },
+                {
+                    ru: `Что вы получите`,
+                    eng: `Your Benefits`,
+                },
+                {
+                    ru: `Как мы работаем`,
+                    eng: `How We Work`,
+                },
+                {
+                    ru: `Преимущества`,
+                    eng: `Advantages`,
+                },
+                {
+                    ru: `Наши работы`,
+                    eng: `Our Work`,
+                },
+                {
+                    ru: `Команда`,
+                    eng: `Team`,
+                },
+                {
+                    ru: `Вопросы/Ответы`,
+                    eng: `FAQ`,
+                },
+                {
+                    ru: `Обратная связь`,
+                    eng: `Feedback`,
+                },
             ],
         translateDataLists = [
             {
@@ -605,7 +690,18 @@ window.addEventListener('DOMContentLoaded', ()=> {
         translateData.forEach(item => {
             translateStatus == 'ru' ? changeText(item['ru'], item['eng']) : changeText(item['eng'], item['ru'])
         })
-        translateStatus == 'ru' ? translateStatus = 'eng' : translateStatus = 'ru'
+        if (translateStatus == 'ru'){
+            translateStatus = 'eng'
+            translateSwitch.textContent = 'ENG'
+            document.body.classList.add('_eng')
+            document.body.classList.remove('_ru')
+        }
+        else {
+            translateStatus = 'ru'
+            translateSwitch.textContent = 'RU'
+            document.body.classList.remove('_eng')
+            document.body.classList.add('_ru')
+        }
         return translateStatus
     })
     let nodes = []
