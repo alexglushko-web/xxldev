@@ -82,14 +82,8 @@ window.addEventListener('DOMContentLoaded', ()=> {
 
     /// === WHAT YOU GET === \\\
     let benefits = document.querySelector('.benefits'),
-        benefitsContainer = document.querySelector('.benefits__container'),
-        benefitsHeight = 0,
         benefitsHeader = benefits.querySelector('.benefits__header'),
-        benefitsHeaderHeight = benefitsHeader.offsetHeight,
-        benefitsContact = benefits.querySelector('.benefits__contact'),
-        benefitsHeaderTop = 0,
-        beneiftsLastItem = benefits.querySelectorAll('.benefits__item')[benefits.querySelectorAll('.benefits__item').length - 1],
-        beneiftsLastItemTop = 0
+        benefitsHeaderTop = 0
 
     if (window.matchMedia('(min-width: 992.1px)').matches){
         benefitsHeader.style.width = benefitsHeader.offsetWidth + 'px'
