@@ -44,7 +44,7 @@ window.addEventListener('DOMContentLoaded', ()=> {
     
     anchors.forEach(item => {
         let ancId = item.id
-        item.insertAdjacentHTML('afterbegin', `<div class="anchor" style='margin-top: -${header.offsetHeight}px;' id=${ancId}_achor></div>`)
+        item.insertAdjacentHTML('afterbegin', `<div class="anchor" style='top: -${header.offsetHeight}px;' id=${ancId}_achor></div>`)
     })
     // $(document).ready(function(){
     //     $('a[href^="#"]').bind('click.smoothscroll',function (e) {
