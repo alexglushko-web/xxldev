@@ -7,37 +7,15 @@ window.addEventListener('DOMContentLoaded', ()=> {
         headerBurger = document.querySelector('.burger'),
         headerMenu = header.querySelector('.header__menu'),
         menuItems = header.querySelectorAll('.menu__item')
-
-
     
-    if (window.matchMedia('(max-width: 992px)').matches){
-        let oldScrollTopPosition = 0
-        window.addEventListener('scroll', ()=>{
-            console.log(window.pageYOffset);
-            const scrollTopPosition = document.documentElement.scrollTop;
-            if (oldScrollTopPosition > scrollTopPosition) {
-                header.classList.add('_scroll')
-            }
-            else{
-                header.classList.remove('_scroll')
-            }
-            
-            oldScrollTopPosition = scrollTopPosition;
-            if (window.pageYOffset == 0){
-                header.classList.remove('_scroll')
-            }
-        })
-    }
-    else {
-        window.addEventListener('scroll', ()=>{
-            if (window.pageYOffset > 0 ){
-                header.classList.add('_scroll')
-            }
-            else{
-                header.classList.remove('_scroll')
-            }
-        })
-    }
+    window.addEventListener('scroll', ()=>{
+        if (window.pageYOffset > 0 ){
+            header.classList.add('_scroll')
+        }
+        else{
+            header.classList.remove('_scroll')
+        }
+    })
 
     headerBurger.addEventListener('click', toggleMenu)
     menuItems.forEach(item => {
@@ -62,23 +40,29 @@ window.addEventListener('DOMContentLoaded', ()=> {
     })
 
     /// === SMOOTH SCROLL === \\\
-    $(document).ready(function(){
-        $('a[href^="#"]').bind('click.smoothscroll',function (e) {
-            e.preventDefault();
+    let anchors = document.querySelectorAll('section')
     
-            var target = this.hash,
-                $target = $(target),
-                $header = $('header'),
-                $headerHeight = $header.outerHeight()
+    anchors.forEach(item => {
+        let ancId = item.id
+        item.insertAdjacentHTML('afterbegin', `<div class="anchor" style='margin-top: -${header.offsetHeight}px;' id=${ancId}_achor></div>`)
+    })
+    // $(document).ready(function(){
+    //     $('a[href^="#"]').bind('click.smoothscroll',function (e) {
+    //         e.preventDefault();
+    //         console.log('e');
+    //         var target = this.hash,
+    //             $target = $(target),
+    //             $header = $('header'),
+    //             $headerHeight = $header.outerHeight()
             
-            $('html, body').stop().animate({
-                'scrollTop': $target.offset().top  - $headerHeight - 24}, 
-                0, 'swing', function () {
-                window.location.hash = target;
-            });
-        });
+    //         $('html, body').stop().animate({
+    //             'scrollTop': $target.offset().top  - $headerHeight - 24}, 
+    //             0, 'swing', function () {
+    //             window.location.hash = target;
+    //         });
+    //     });
         
-    });
+    // });
 
     /// === WHAT YOU GET === \\\
     let benefits = document.querySelector('.benefits'),

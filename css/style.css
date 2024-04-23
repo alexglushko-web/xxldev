@@ -2937,6 +2937,8 @@ span
 
     .benefits__header
     {
+        position: static;
+
         margin-bottom: 38px;
         padding: 16px 0;
     }
