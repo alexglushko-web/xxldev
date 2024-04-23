@@ -40,11 +40,17 @@ window.addEventListener('DOMContentLoaded', ()=> {
     })
 
     /// === SMOOTH SCROLL === \\\
-    let anchors = document.querySelectorAll('section')
+    let anchors = document.querySelectorAll('section'),
+        anchorsLinks = document.querySelectorAll('a[href^="#"]')
     
+    anchorsLinks.forEach(link => {
+        let linkId = link.getAttribute('href')
+        link.setAttribute('href', linkId + '_anchor')
+    });
     anchors.forEach(item => {
         let ancId = item.id
-        item.insertAdjacentHTML('afterbegin', `<div class="anchor" style='top: -${header.offsetHeight}px;' id=${ancId}_achor></div>`)
+        
+        item.insertAdjacentHTML('afterbegin', `<div class="anchor" style='top: -${header.offsetHeight}px; position: relative;' id=${ancId}_anchor></div>`)
     })
     // $(document).ready(function(){
     //     $('a[href^="#"]').bind('click.smoothscroll',function (e) {
@@ -52,11 +58,10 @@ window.addEventListener('DOMContentLoaded', ()=> {
     //         console.log('e');
     //         var target = this.hash,
     //             $target = $(target),
-    //             $header = $('header'),
-    //             $headerHeight = $header.outerHeight()
+    //             $header = $('header')
             
     //         $('html, body').stop().animate({
-    //             'scrollTop': $target.offset().top  - $headerHeight - 24}, 
+    //             'scrollTop': $target.offset().top - 100}, 
     //             0, 'swing', function () {
     //             window.location.hash = target;
     //         });
